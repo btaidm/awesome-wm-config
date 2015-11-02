@@ -604,7 +604,7 @@ awful.key({ modkey,           }, "o", awful.client.movetoscreen),
 
 --- misc
 
-awful.key({modkey}, "F2", function()
+awful.key({modkey}, "r", function()
     awful.prompt.run(
     {prompt = "Run: "},
     mypromptbox[mouse.screen].widget,
