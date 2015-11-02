@@ -233,7 +233,7 @@ end
 
 --{{
 local tools = {
-    terminal = "sakura",
+    terminal = "termite",
     system = {
         filemanager = "pcmanfm",
     },
@@ -245,8 +245,8 @@ local tools = {
 
 tools.browser.primary = os.getenv("BROWSER") or "chromium"
 tools.browser.secondary = ({chromium="firefox", firefox="chromium"})[tools.browser.primary]
-tools.editor.primary = os.getenv("EDITOR") or "gvim"
-tools.editor.secondary = ({emacs="gvim", gvim="emacs"})[tools.editor.primary]
+tools.editor.primary = os.getenv("EDITOR") or "subl3"
+tools.editor.secondary = ({subl3="gvim", gvim="subl3"})[tools.editor.primary]
 
 local myapp = nil
 do
