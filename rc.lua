@@ -50,7 +50,7 @@ customization.default.property = {
 }
 
 customization.default.compmgr = 'xcompmgr'
-customization.default.wallpaper_change_interval = 15
+customization.default.wallpaper_change_interval = 3600
 
 customization.option.wallpaper_change_p = true
 
