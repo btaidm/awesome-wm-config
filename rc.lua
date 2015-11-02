@@ -1334,8 +1334,15 @@ for i = 1, 10 do
             mypromptbox[scr].widget,
             function (text)
                 if #text>0 then
-                    tag = awful.tag.add(text)
-                    awful.tag.setscreen(tag, scr)
+                    tag = awful.tag.add(text,
+                    {
+                        screen = scr,
+                        layout = customization.default.property.layout,
+                        mwfact = customization.default.property.mwfact,
+                        nmaster = customization.default.property.nmaster,
+                        ncol = customization.default.property.ncol,
+                    }
+                    )
                     awful.tag.move(#tags+1, tag)
                     awful.tag.viewonly(tag)
                 end
@@ -1359,8 +1366,17 @@ for i = 1, 10 do
             mypromptbox[scr].widget,
             function (text)
                 if #text>0 then
-                    tag = awful.tag.add(text)
-                    awful.tag.setscreen(tag, scr)
+                    tag = awful.tag.add(text,
+                    {
+                        screen = scr,
+                        layout = customization.default.property.layout,
+                        mwfact = customization.default.property.mwfact,
+                        nmaster = customization.default.property.nmaster,
+                        ncol = customization.default.property.ncol,
+                    }
+                    )
+                    awful.tag.move(#tags+1, tag)
+                    awful.tag.viewonly(tag)
                     awful.tag.move(#tags+1, tag)
                     awful.tag.viewonly(tag)
                 end
