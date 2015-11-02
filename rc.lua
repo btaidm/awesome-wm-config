@@ -496,7 +496,7 @@ do
 
     else
 
-        local tag = awful.tag.add("genesis",
+        local tag = awful.tag.add("General",
         {
             screen = 1,
             layout = customization.default.property.layout,
@@ -507,7 +507,7 @@ do
         )
         awful.tag.viewonly(tag)
 
-        awful.tag.add("nil",
+        tag = awful.tag.add("Web",
         {
             screen = 2,
             layout = customization.default.property.layout,
@@ -515,8 +515,21 @@ do
             nmaster = customization.default.property.nmaster,
             ncol = customization.default.property.ncol, 
         } 
-        ) 
+        )
+        awful.tag.viewonly(tag)
+        
 
+        tag = awful.tag.add("PDF",
+        {
+            screen = 3,
+            layout = customization.default.property.layout,
+            mwfact = customization.default.property.mwfact,
+            nmaster = customization.default.property.nmaster,
+            ncol = customization.default.property.ncol, 
+        } 
+        ) 
+        awful.tag.viewonly(tag)
+        
     end
 end
 
